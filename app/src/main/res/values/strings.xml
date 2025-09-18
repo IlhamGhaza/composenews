@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">compose news</string>
+    <string name="about_name">Muhammad Ilham Ghazali</string>
+    <string name="about_email">milhamghazali44@gmail.com</string>
 </resources>
