@@ -1,9 +1,11 @@
 package com.igz.composenews.ui.screens.about
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.AccountCircle
@@ -17,6 +19,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -45,12 +48,10 @@ fun AboutScreen(onBack: () -> Unit) {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Icon(
-                imageVector = Icons.Default.AccountCircle,
-                contentDescription = "Foto profil",
-                modifier = Modifier
-                    .padding(bottom = 16.dp),
-                tint = MaterialTheme.colorScheme.primary
+            Image(
+                painter = painterResource(id = R.drawable.ic_foto_diri),
+                contentDescription = "Foto diri",
+                modifier = Modifier.size(128.dp)
             )
             Text(text = stringResource(id = R.string.about_name), style = MaterialTheme.typography.titleLarge, textAlign = TextAlign.Center)
             Text(text = stringResource(id = R.string.about_email), style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.Center)
