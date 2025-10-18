@@ -75,6 +75,9 @@ dependencies {
     // Images
     implementation(libs.coil.compose)
 
+    // Jsoup: HTML parsing to attempt fetching full article text when API gives a snippet
+    implementation("org.jsoup:jsoup:1.16.1")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
